@@ -1,0 +1,35 @@
+﻿//
+// Social
+//
+
+.social {
+	display: inline-block;
+	height: 2em;
+	width: 2em;
+	text-indent: -9999px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: .5;
+
+	& + & {
+		margin-left: .5em;
+	}
+
+	&.twitter {
+		background-image: url("/images/social/twitter-circle.svg");
+	}
+
+	&.facebook {
+		background-image: url("/images/social/facebook-circle.svg");
+	}
+
+	&.linkedin {
+		background-image: url("/images/social/linkedin-circle.svg");
+	}
+	&.houzz {
+		background-image: url("/images/social/houzz-circle.svg");
+	}
+	&.instagram {
+		background-image: url("/images/social/instagram-circle.svg");
+	}
+}

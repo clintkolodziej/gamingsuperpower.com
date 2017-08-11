@@ -1,0 +1,9 @@
+{
+  "name": "retrosuperpower.com",
+  "private": true,
+  "dependencies": {
+    "jquery": "*",
+    "prism": "*",
+    "watercolor": "*"
+  }
+}

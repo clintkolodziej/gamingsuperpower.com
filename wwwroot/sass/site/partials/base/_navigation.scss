@@ -1,0 +1,107 @@
+//
+// Modules
+//
+
+@import "watercolor/modules/grid";
+
+//
+// Navigation
+//
+
+#nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 999;
+
+	ul {
+		list-style: none;
+		display: block;
+		visibility: hidden;
+		position: relative;
+		margin: 0;
+		margin-right: .25em;
+		padding: 0;
+		clear: both;
+		border-radius: .25em;
+		background: rgba(255,255,255,0.97);
+		box-shadow: 0 1px 20px rgba(0,0,0,0.20);
+		opacity: 0;
+		transition: all 0.25s;
+		top: 0;
+		height: 0;
+
+		&.open {
+			display: block;
+			visibility: visible;
+			opacity: 1;
+			top: .5em;
+			height: 100%;
+		}
+
+		&:before {
+			position: absolute;
+			bottom: 100%;
+			right: .55em;
+			display: block;
+			width: 0;
+			height: 0;
+			margin-left: -8px;
+			margin-top: -16px;
+			height: 0;
+			border: 8px solid transparent;
+			border-bottom-color: rgba(255,255,255,0.97);
+			content: "";
+		}
+	}
+
+	li {
+		position: relative;
+		border-top: 1px solid rgba(0,0,0,0.03);
+
+		&:first-child {
+			border-top-color: transparent;
+		}
+
+		a {
+			position: relative;
+			display: block;
+			padding: 0 2em;
+			line-height: 2.5em;
+			color: #bbb;
+
+			&:hover {
+				color: #444;
+			}
+		}
+	}
+}
+
+//
+// Navigation Button
+//
+
+#nav-button {
+	float: right;
+	margin: .125em;
+	padding: .2em;
+	border: 0;
+	box-shadow: none;
+	background: transparent;
+	font-size: 1.5em;
+	color: #fff;
+	text-align: center;
+	border-radius: .25em;
+	background-color: rgba(0,0,0,0.3);
+
+    width: 1em;
+    height: 1em;
+    background-image: url(/images/hamburger-icon.svg);
+    background-size: 75%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+	&:hover {
+		background-color: rgba(0,0,0,0.5);
+	}
+}
