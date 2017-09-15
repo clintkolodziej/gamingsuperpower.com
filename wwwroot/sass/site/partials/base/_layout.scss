@@ -129,12 +129,12 @@ body,
 		text-align: center;
 
 		//background-image: linear-gradient(to right, rgb(255,0,0) 33.333333%,rgb(0,255,0) 33.333333%, rgb(0,255,0) 66.666667%, rgb(0,0,255) 66.666667%);
-		background-image: linear-gradient(to right, rgb(255,0,0)  16.666667%, rgb(0,255,0) 16.666667%, rgb(0,255,0) 33.333333%, rgb(0,0,255) 33.333333%, rgb(0,0,255) 50%, rgb(255,0,0)  50%, rgb(255,0,0)  66.666667%, rgb(0,255,0) 66.666667%, rgb(0,255,0) 83.333333%, rgb(0,0,255) 83.333333%);
-		-webkit-background-size: 100% 5px;
-		-moz-background-size: 100% 5px;
-		background-size: 100% 5px;
-		background-repeat: no-repeat;
-		background-position: center bottom;
+		// background-image: linear-gradient(to right, rgb(255,0,0)  16.666667%, rgb(0,255,0) 16.666667%, rgb(0,255,0) 33.333333%, rgb(0,0,255) 33.333333%, rgb(0,0,255) 50%, rgb(255,0,0)  50%, rgb(255,0,0)  66.666667%, rgb(0,255,0) 66.666667%, rgb(0,255,0) 83.333333%, rgb(0,0,255) 83.333333%);
+		// -webkit-background-size: 100% 5px;
+		// -moz-background-size: 100% 5px;
+		// background-size: 100% 5px;
+		// background-repeat: no-repeat;
+		// background-position: center bottom;
 
 		&:last-child {
 			border: 0;

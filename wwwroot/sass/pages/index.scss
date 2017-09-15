@@ -138,7 +138,23 @@
 //
 
 #challenges {
-	//background-color: #f8fafc;
+
+	#challenges-text,
+	{
+	   @include column;
+
+	   @include breakpoint(large) {
+		   @include column($prefix: 2, $suffix: 2);
+	   }
+
+	   @include breakpoint(extra-large) {
+		   @include column($prefix: 3, $suffix: 3);
+	   }
+	}
+
+	p {
+		text-align: justify;
+	}
 
 	ul {
 		list-style: none;
@@ -157,17 +173,17 @@
         }
 
 		@include breakpoint(large) {
-            @include column(6);
+            @include column(3);
         }
 
 		@include breakpoint(extra-large) {
-            @include column(8);
+            @include column(4);
         }
 	}
 
 	figure {
 		margin: 0;
-		text-align: left;
+		text-align: justify;
 
 		figcaption {
 			font-style: normal;
@@ -193,7 +209,73 @@
 #upscalers {
 	background-color: #f8fafc;
 
-	#upscaler-text,
+    background-size: 1200px 800px;
+    background-repeat: no-repeat;
+	background-image: url(/images/devices/xrgb-mini.png);
+	background-position: center -300px;
+
+	#upscaler-text
+	{
+		margin-top: 300px;
+
+		margin-bottom: $line-height * 1em;
+
+		@include column;
+
+		@include breakpoint(large) {
+			@include column($prefix: 2, $suffix: 2);
+		}
+
+		@include breakpoint(extra-large) {
+			@include column($prefix: 3, $suffix: 3);
+		}
+	}
+
+	.button {
+		margin-top: $line-height * 1em;
+	}
+
+	p {
+		text-align: justify;
+	}
+
+	figure {
+		margin: 0;
+		text-align: left;
+		@include column;
+
+		figcaption {
+			font-style: normal;
+
+			h3 {
+				margin: 0;
+				font-weight: 600;
+				font-size: 1.25em;
+			}
+
+			p {
+				margin: 0;
+			}
+		}
+
+		// @include breakpoint(large) {
+        //     @include column(6);
+        // }
+
+		// @include breakpoint(extra-large) {
+        //     @include column(8);
+        // }
+	}
+
+}
+
+//
+// Switches
+//
+
+#switches {
+
+	#switches-text
 	{
 		margin-bottom: $line-height * 1em;
 
@@ -212,42 +294,10 @@
 		text-align: justify;
 	}
 
-	figure {
-		margin: 0;
-		text-align: left;
-		@include column;
-
-		figcaption {
-			font-style: normal;
-
-			h3 {
-				margin: 0;
-				font-weight: 600;
-				font-size: 1.25em;
-			}
-
-			p {
-				margin: 0;
-			}
-		}
-
-		@include breakpoint(large) {
-            @include column(6);
-        }
-
-		@include breakpoint(extra-large) {
-            @include column(8);
-        }
+	.button {
+		margin-top: $line-height * 1em;
+		//margin-bottom: $line-height * 1em;
 	}
-
-}
-
-//
-// Switches
-//
-
-#switches {
-	//background-color: #f8fafc;
 }
 
 //
@@ -264,343 +314,89 @@
 
 #consoles {
 	//background-color: #f8fafc;
-}
 
-//
-// Featured
-//
+	#consoles-text,
+	{
+	   @include column;
 
-#featured {
+	   @include breakpoint(large) {
+		   @include column($prefix: 2, $suffix: 2);
+	   }
 
-	a {
-		// display: inline-block;
-		// margin: 1em 0;
-		// padding: .25em 1em;
-		// border: 2px solid #7ac143;
-		// border-radius: .25em;
-		// font-size: .625em;
-
-		// strong {
-		// 	font-size: 1.75em;
-		// 	color: #7ac143;
-		// }
-
-		img {
-			height: 2.5em;
-			// vertical-align: -35%;
-			// margin-left: .5em;
-		}
-
-		// @include breakpoint(small) {
-        //     font-size: .75em;
-        // }
-
-		// @include breakpoint(medium) {
-		// 	margin: 2em 0;
-        //     font-size: 1em;
-        // }
-	}
-}
-
-//
-// Testimonials
-//
-
-#testimonials {
-	background-color: #f8fafc;
-
-	a {
-		display: inline-block;
-		margin-bottom: $line-height * 1em;
-
-		img {
-			display: block;
-			height: 75px;
-
-			@include breakpoint(small) {
-				height: 100px;
-			}
-
-			@include breakpoint(large) {
-				height: 125px;
-			}
-		}
-	}
-
-	ul {
-		position: relative;
-		margin: 0;
-		padding: 0;
-		height: 6em;
-		list-style: none;
-
-		@include breakpoint(small) {
-			height: 4em;
-        }
-
-	}
-
-	li {
-		position: absolute;
-		top: 50%;
-		width: 100%;
-		margin: 0;
-		padding: 0;
-		opacity: 0;
-		text-align: center;
-		font-size: 1em;
-		font-style: italic;
-		animation: rotateWordsFirst 30s linear infinite 0s;
-		transform: translateY(-50%);
-
-		&:nth-child(2) {
-			animation-delay: 5s;
-		}
-		&:nth-child(3) {
-			animation-delay: 10s;
-		}
-		&:nth-child(4) {
-			animation-delay: 15s;
-		}
-		&:nth-child(5) {
-			animation-delay: 20s;
-		}
-		&:nth-child(6) {
-			animation-delay: 25s;
-		}
-
-		@include breakpoint(large) {
-			font-size: 1.5em;
-        }
-	}
-}
-
-@keyframes rotateWordsFirst {
-    0% { opacity: 0; animation-timing-function: ease-in; }
-	4% { opacity: 1;}
-    12% { opacity: 1;}
-    18% { opacity: 0; }
-    100% { opacity: 0; }
-}
-
-//
-// About
-//
-
-#about {
-
-	#about-text,
-	 {
-		@include column;
-
-		@include breakpoint(large) {
-            @include column($prefix: 2, $suffix: 2);
-        }
-
-		@include breakpoint(extra-large) {
-            @include column($prefix: 3, $suffix: 3);
-        }
+	   @include breakpoint(extra-large) {
+		   @include column($prefix: 3, $suffix: 3);
+	   }
 	}
 
 	p {
 		text-align: justify;
 	}
-}
-
-//
-// Services
-//
-
-#services {
 
 	ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		@include grid;
+		display: flex;
+		align-content: stretch;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: stretch;
 	}
 
 	li {
-		margin: $line-height * 1em 0;
+		position: relative;
+		//margin: $line-height * .5em 0;
+		width: 50%;
 
-		@include column();
+		transition: all 0.15s ease-in-out;
+		//@include column();
+
+		@include breakpoint(small) {
+			//@include column(4);
+			width: 33.33333333%;
+		}
 
 		@include breakpoint(medium) {
-            @include column(4);
+			//@include column(4);
+			width: 25%;
         }
 
 		@include breakpoint(large) {
-            @include column(6);
+			//@include column(3);
+			width: 20%;
         }
 
 		@include breakpoint(extra-large) {
-            @include column(8);
-        }
+			//@include column(4);
+			width: 16.66666666666667%;
+		}
+
+		&:hover {
+			box-shadow: 0 0 40px rgba(0,0,0,0.25);
+			z-index: 999;
+			transform: scale(1.05);
+		}
 	}
 
 	figure {
 		margin: 0;
+		padding: .75em .75em .25em .75em;
 		text-align: left;
+		color: white;
+
+		img {
+			display: block;
+		}
 
 		figcaption {
 			font-style: normal;
 
 			h3 {
-				margin-bottom: 0;
-				font-weight: 600;
-				font-size: 1.25em;
-			}
-
-			p {
-				margin: 0;
-				font-weight: 300;
+				margin: .75em 0 .5em 0;
+				font-weight: 400;
+				font-size: .65em;
 			}
 		}
-	}
-}
-
-//
-// Gallery
-//
-
-#gallery {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	height: 85vh;
-	/*background-attachment: fixed;*/
-	background-color: $primary-color;
-	background-image: url("/images/gallery/c6.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-
-	animation-name: gallerycarousel;
-	animation-duration: 20s;
-	animation-iteration-count: infinite;
-	animation-delay: 2s;
-}
-
-@keyframes gallerycarousel {
-	0% {
-		background-image: url("/images/gallery/c6.jpg");
-	}
-	20% {
-		background-image: url("/images/gallery/b55.jpg");
-	}
-	40% {
-		background-image: url("/images/gallery/b38.jpg");
-	}
-	60% {
-		background-image: url("/images/gallery/b47.jpg");
-	}
-	80% {
-		background-image: url("/images/gallery/b25-1.jpg");
-	}
-	100% {
-		background-image: url("/images/gallery/c6.jpg");
-	}
-}
-
-//
-// Available Properties
-//
-
-#properties {
-
-}
-
-//
-// Referrals
-//
-
-#referrals {
-	background-color: #f8fafc;
-
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		@include grid;
-	}
-
-	li {
-		margin: 0 $line-height * .5em $line-height * 1em $line-height * .5em;
-
-		@include column;
-
-		@include breakpoint(large) {
-            @include column(6);
-        }
-
-		@include breakpoint(extra-large) {
-            @include column(8);
-        }
-	}
-
-	blockquote {
-		margin: 0;
-		text-align: justify;
-
-		@include breakpoint(large) {
-            margin: $line-height * .5em;
-        }
-
-		@include breakpoint(extra-large) {
-            margin: $line-height * 1em;
-        }
-
-		cite {
-			font-weight: 400;
-			font-style: normal;
-		}
-	}
-}
-
-//
-// Contact
-//
-
-#contact {
-
-	header, form {
-		@include column;
-
-		@include breakpoint(large) {
-            @include column($prefix: 1, $suffix: 1);
-        }
-
-		@include breakpoint(extra-large) {
-            @include column($prefix: 3, $suffix: 3);
-        }
-	}
-
-	h2 {
-		text-align: center;
-	}
-
-	label {
-		display: block;
-		text-align: left;
-	}
-
-	input,
-	textarea {
-		display: block;
-		background: #fff;
-		border: 1px solid #f0f0f0;
-		padding: .5em;
-		margin: .5em 0;
-        -webkit-appearance: none;
-	}
-
-	#Name,
-	#Email,
-	#Phone,
-	#Message {
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		width: 100%;
 	}
 }
