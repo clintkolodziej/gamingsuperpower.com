@@ -22,9 +22,6 @@ var options = {
         parameters: {
             outputStyle: "expanded",
 			includePaths: ["wwwroot/lib/", "wwwroot/sass/"]
-        },
-        error: function (err) {
-            console.error('Error!', err.message);
         }
     },
 };
@@ -38,7 +35,10 @@ gulp.task("clean", ["clean:css"]);
 gulp.task('build:sass', ['clean:css'], function () {
 	return gulp.src(paths.sass + "**/*.scss")
 		.pipe(sourcemaps.init())
-		.pipe(sass(options.sass.parameters).on('error', options.sass.error))
+        .pipe(sass(options.sass.parameters)
+            .on('error', sass.logError)
+            //.on('error', options.sass.error)
+        )
 		//.pipe(prefix())
         .pipe(cssmin())
 		.pipe(sourcemaps.write())

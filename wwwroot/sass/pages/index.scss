@@ -225,24 +225,23 @@ ul.cards {
 //
 
 #consoles {
-	//background-color: #f8fafc;
 	padding-bottom: 0 !important;
+	background-color: #282a2c;
+	color: #fff;
+
 
 	ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
 		display: flex;
-		align-content: stretch;
-		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: flex-start;
-		align-items: stretch;
 	}
 
 	li {
 		position: relative;
 		width: 50%;
+		flex-grow: 1;
 
 		transition: all 0.15s ease-in-out;
 
@@ -259,7 +258,7 @@ ul.cards {
         }
 
 		@include breakpoint(extra-large) {
-			width: 16.6%;
+			width: 16%;
 		}
 
 		&:hover {
@@ -286,6 +285,91 @@ ul.cards {
 				margin: .75em 0 .5em 0;
 				font-weight: 400;
 				font-size: .65em;
+			}
+		}
+	}
+}
+
+//
+// Credits
+//
+
+#credits {
+	background-color: #f8fafc;
+
+	section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: $line-height * 1em 0;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0 auto;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		@include breakpoint(large) {
+			width: 42rem;
+		}
+
+		li {
+			box-sizing: border-box;
+			display: flex;
+			position: relative;
+			width: 15%;
+			flex: 1;
+			transition: all 0.15s ease-in-out;
+			text-align: left;
+
+			img {
+				width: 100%;
+				border-radius: 50%;
+				box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+			}
+		}
+
+		figure {
+			margin: 1em;
+		}
+
+		figcaption {
+			display: none;
+		}
+
+		li:hover figcaption {
+			display: block;
+			position: absolute;
+			top: -100%;
+			left: 0;
+			font-size: .75em;
+			background-color: rgba(0,0,0,0.8);
+			color: #fff;
+			padding: 1em;
+			box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+			&:before{
+				content: " ";
+				position: absolute;
+				bottom: -1em;
+				left: 50%;
+				margin-left: -1em;
+				z-index: 99;
+				border-style: solid;
+				border-color: rgba(0,0,0,0.8) transparent;
+				border-width: 1em 1em 0 1em;
+			}
+
+			h3 {
+				margin: 0;
+				font-size: 1.125em;
+				font-weight: 400;
+			}
+			p {
+				margin: 0;
 			}
 		}
 	}
