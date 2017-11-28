@@ -17,6 +17,7 @@
 @section Header {
 
 	<a class="logo" href="/"></a>
+	<h6 style="margin-top: -8em; text-shadow: 0px 4px black;">Retro and modern gaming on modern displays</h6>
 
 	<a id="scroller" href="#mission"><span></span></a>
 
@@ -51,6 +52,91 @@
 
 </section>
 
+<style>
+
+	#foo {
+		display: flex;
+		flex-wrap: wrap;
+		min-height: 0;
+		padding: 0 !important;
+	}
+
+	#foo article {
+		box-sizing: border-box;
+		width: 50%;
+		padding: 4em 3em;
+		text-align: left;
+		transition: all .15s ease-in-out;
+	}
+
+	#foo article:hover {
+		box-shadow: 0 0 40px rgba(0,0,0,.25);
+		z-index: 999;
+		transform: scale(1.05);
+	}
+
+	#foo article:nth-of-type(3n+1) {
+		background-color: #f6f4f7;
+	}
+
+	#foo article:nth-of-type(3n+2) {
+		background-color: #fcfafd;
+	}
+
+	#foo article:nth-of-type(3n+3) {
+		background-color: #f2f0f3;
+	}
+
+	#foo article a {
+		color: inherit;
+	}
+
+	#foo article h3 {
+		font-size: 1.25em;
+	}
+
+	#foo article h3 ~ p {
+		margin-top: 0;
+	}
+
+</style>
+
+<section id="foo">
+
+	<article>
+		<a href="/choosing-a-display">
+			<img src="~/images/challenges/input-lag.jpg" alt="Choosing a Display">
+			<h3>Choosing a Display</h3>
+			<p>Choosing a display is one of the most important things to getting a great gaming experience for modern and retro games. We'll give you info on what to look for, and resources to make an informed choice in this critical decision.</p>
+		</a>
+	</article>
+
+	<article>
+		<a href="/connectivity">
+			<img src="~/images/challenges/connectivity.jpg" alt="Connectivity">
+			<h3>Connectivity</h3>
+			<p>Retro game consoles support a number of connectivity options that modern displays generally don't have inputs for. We'll give you the basics on each connection type and how they can integrate into your gaming setup.</p>
+		</a>
+	</article>
+
+	<article>
+		<a href="/upscalers">
+			<img src="~/images/challenges/upscaling-zelda.jpg" alt="Upscalers">
+			<h3>Upscalers</h3>
+			<p>Retro gaming on modern displays will require an upscaler if you want your games to look their best. Modern displays generally upscale using methods that look great for movies, but provide a poor quality image for low resolution gaming sources.</p>
+		</a>
+	</article>
+
+	<article>
+		<a href="/switches">
+			<img src="~/images/devices/gscartsw-3.4.jpg" alt="Switches">
+			<h3>Switches</h3>
+			<p>Once you have more than a few consoles you will quickly realize you need a way to switch between them without swapping cables. There are many types of switches, but the most common needs are for a SCART switches, component switches, and HDMI switches.</p>
+		</a>
+	</article>
+
+</section>
+<!--
 <section id="challenges">
 
 	<div class="container">
@@ -127,137 +213,8 @@
 	</div>
 
 </section>
-
-<section id="upscalers">
-
-	<div class="container">
-
-		<div class="intro">
-
-			<header>
-
-				<h2>Upscalers</h2>
-
-			</header>
-
-			<p>
-
-				Upscalers are a near-critical component of a modern retro gaming setup due to poor scaling on TV resolutions used by retro consoles.
-				The two major options, the Open Source Scan Convertor (OSSC) and the XRGB-mini Framemeister, have tradeoffs depending on your setup, but we'll do our best to steer you in the right direction.
-
-			</p>
-
-		</div>
-
-		<ul class="cards">
-
-			<li>
-
-				<figure id="ossc">
-					<img src="~/images/devices/ossc-1.5a.jpg" alt="OSSC">
-					<figcaption>
-						<h3>OSSC</h3>
-						<p>The Open Source Scan Converter (OSSC) provides a zero-lag solution, but has compromises on compatibility.</p>
-					</figcaption>
-				</figure>
-
-			</li>
-
-			<li>
-
-				<figure id="xrgb-mini">
-					<img src="~/images/devices/xrgb-mini_z01.jpg" alt="XRGB Mini Framemeister">
-					<figcaption>
-						<h3>Framemeister</h3>
-						<p>The XRGB Mini Framemeister is a more feature packed device with better compatibility, but at the cost of additional lag.</p>
-					</figcaption>
-				</figure>
-
-			</li>
-
-		</ul>
-
-		<a class="button" href="/upscalers">Learn more about upscalers</a>
-
-	</div>
-
-</section>
-
-<section id="switches">
-
-	<div class="container">
-
-		<div class="intro">
-
-			<header>
-
-				<h2>Switches</h2>
-
-			</header>
-
-			<p>
-
-				Once you have more than a few consoles you will quickly realize you need a way to switch between them without swapping cables.
-				There are many types of switches, but the most common needs are for a SCART switches, component switches, and HDMI switches.
-
-			</p>
-
-		</div>
-
-		<ul class="cards">
-
-			<li>
-
-				<figure>
-					<img src="~/images/devices/gscartsw-3.4.jpg" alt="SCART Switches">
-					<figcaption>
-						<h3>SCART Switches</h3>
-						<p>The Open Source Scan Converter (OSSC) provides a zero-lag solution, but has compromises on compatibility.</p>
-					</figcaption>
-				</figure>
-
-			</li>
-
-			<li>
-
-				<figure>
-					<img src="~/images/devices/gcompsw-1.0.jpg" alt="Component Switches">
-					<figcaption>
-						<h3>Component Switches</h3>
-						<p>The XRGB Mini Framemeister is a more feature packed device with better compatibility, but at the cost of additional lag.</p>
-					</figcaption>
-				</figure>
-
-			</li>
-
-			<li>
-
-				<figure>
-					<img src="~/images/devices/hdmi-monoprice.jpg" alt="HDMI Switches">
-					<figcaption>
-						<h3>HDMI Switches</h3>
-						<p>The XRGB Mini Framemeister is a more feature packed device with better compatibility, but at the cost of additional lag.</p>
-					</figcaption>
-				</figure>
-
-			</li>
-
-		</ul>
-
-		<a class="button" href="/switches">Learn more about switches</a>
-
-	</div>
-
-</section>
-<!--
-<section id="guides">
-
-	<div class="container">
-
-	</div>
-
-</section>
 -->
+
 <section id="consoles">
 
 	<div class="container">
@@ -288,7 +245,7 @@
 				<figure style="background-color: #cb0015;">
 					<img src="/images/consoles/small/NES-Console-Set.png">
 					<figcaption>
-						<h3>Nintendo (NES)</h3>
+						<h3>NES</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -301,7 +258,7 @@
 				<figure style="background-color: #4f43ae;">
 					<img src="/images/consoles/small/SNES-Mod1-Console-Set.png">
 					<figcaption>
-						<h3>Super Nintendo</h3>
+						<h3>SNES</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -314,7 +271,7 @@
 				<figure style="background-color: #189d5d;">
 					<img src="/images/consoles/small/N64-Console-Set.png">
 					<figcaption>
-						<h3>Nintendo 64</h3>
+						<h3>N64</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -327,7 +284,7 @@
 				<figure style="background-color: #645097;">
 					<img src="/images/consoles/small/GameCube-Console-Set.png">
 					<figcaption>
-						<h3>Nintendo GameCube</h3>
+						<h3>GameCube</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -340,7 +297,7 @@
 				<figure style="background-color: #009ac7;">
 					<img src="/images/consoles/small/Wii_console.png">
 					<figcaption>
-						<h3>Nintendo Wii</h3>
+						<h3>Wii</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -353,7 +310,7 @@
 				<figure style="background-color: #8b8b8b;">
 					<img src="/images/consoles/small/Wii_console.png">
 					<figcaption>
-						<h3>Nintendo Wii U</h3>
+						<h3>Wii U</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -366,7 +323,7 @@
 				<figure style="background-color: #414548;">
 					<img src="/images/consoles/small/Nintendo-Switch-Console-Docked-wJoyConRB.png">
 					<figcaption>
-						<h3>Nintendo Switch</h3>
+						<h3>Switch</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -379,7 +336,7 @@
 				<figure style="background-color: #c82a2b;">
 					<img src="/images/consoles/small/Sega-Master-System-Set.png">
 					<figcaption>
-						<h3>Sega Master System</h3>
+						<h3>Master System</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -392,7 +349,7 @@
 				<figure style="background-color: #222;">
 					<img src="/images/consoles/small/Sega-Genesis-Mod1-Set.png">
 					<figcaption>
-						<h3>Sega Genesis</h3>
+						<h3>Genesis</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -405,7 +362,7 @@
 				<figure style="background-color: #4E4D4C;">
 					<img src="/images/consoles/small/Sega-Saturn-Console-Set-Mk1.png">
 					<figcaption>
-						<h3>Sega Saturn</h3>
+						<h3>Saturn</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -418,7 +375,7 @@
 				<figure style="background-color: #e75949;">
 					<img src="/images/consoles/small/Dreamcast-Console-Set.png">
 					<figcaption>
-						<h3>Sega Dreamcast</h3>
+						<h3>Dreamcast</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -431,7 +388,7 @@
 				<figure style="background-color: #5dc21e;">
 					<img src="/images/consoles/small/Xbox-Console-wDuke-L.png">
 					<figcaption>
-						<h3>Microsoft Xbox</h3>
+						<h3>Xbox</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -444,7 +401,7 @@
 				<figure style="background-color: #475ac8;">
 					<img src="/images/consoles/small/Microsoft-Xbox-360-Pro-Flat-wController-L.png">
 					<figcaption>
-						<h3>Microsoft Xbox 360</h3>
+						<h3>Xbox 360</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -457,7 +414,7 @@
 				<figure style="background-color: #eb4c58;">
 					<img src="/images/consoles/small/Xbox-One-Console-wController-FL.png">
 					<figcaption>
-						<h3>Microsoft Xbox One</h3>
+						<h3>Xbox One</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -470,7 +427,7 @@
 				<figure style="background-color: #bebebc;">
 					<img src="/images/consoles/small/PSX-Console-wController.png">
 					<figcaption>
-						<h3>Sony Playstation</h3>
+						<h3>Playstation</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -483,7 +440,7 @@
 				<figure style="background-color: #4381b1;">
 					<img src="/images/consoles/small/PS2-Slim-Console-Set.png">
 					<figcaption>
-						<h3>Sony Playstation 2</h3>
+						<h3>Playstation 2</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -496,7 +453,7 @@
 				<figure style="background-color: #3fb89e;">
 					<img src="/images/consoles/small/Ps3-fat-console.png">
 					<figcaption>
-						<h3>Sony Playstation 3</h3>
+						<h3>Playstation 3</h3>
 					</figcaption>
 				</figure>
 			</a>
@@ -509,7 +466,7 @@
 				<figure style="background-color: #222;">
 					<img src="/images/consoles/small/Sony-PlayStation-4-wController.png">
 					<figcaption>
-						<h3>Sony Playstation4 </h3>
+						<h3>Playstation 4 </h3>
 					</figcaption>
 				</figure>
 			</a>
