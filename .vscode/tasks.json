@@ -7,7 +7,7 @@
         {
             "taskName": "build",
             "args": [
-                "${workspaceRoot}/retro.csproj"
+                "${workspaceRoot}/gamingsuperpower.csproj"
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"

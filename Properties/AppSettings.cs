@@ -1,4 +1,4 @@
-namespace retro
+namespace gamingsuperpower
 {
     public class AppSettings
     {

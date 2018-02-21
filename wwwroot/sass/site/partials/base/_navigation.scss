@@ -20,10 +20,9 @@
 		visibility: hidden;
 		position: relative;
 		margin: 0;
-		margin-right: .25em;
+		margin-right: .75em;
 		padding: 0;
 		clear: both;
-		border-radius: .25em;
 		background: rgba(255,255,255,0.97);
 		box-shadow: 0 1px 20px rgba(0,0,0,0.20);
 		opacity: 0;
@@ -42,7 +41,7 @@
 		&:before {
 			position: absolute;
 			bottom: 100%;
-			right: .55em;
+			right: 1em;
 			display: block;
 			width: 0;
 			height: 0;
@@ -67,7 +66,9 @@
 			position: relative;
 			display: block;
 			padding: 0 2em;
-			line-height: 2.5em;
+			font-family: "Press Start 2P",sans-serif;
+			font-size: .75em;
+			line-height: 4em;
 			color: #bbb;
 
 			&:hover {
@@ -83,7 +84,7 @@
 
 #nav-button {
 	float: right;
-	margin: .125em;
+	margin: .5em;
 	padding: .2em;
 	border: 0;
 	box-shadow: none;
@@ -91,11 +92,10 @@
 	font-size: 1.5em;
 	color: #fff;
 	text-align: center;
-	border-radius: .25em;
 	background-color: rgba(0,0,0,0.3);
 
-    width: 1em;
-    height: 1em;
+    width: 1.5em;
+    height: 1.5em;
     background-image: url(/images/hamburger-icon.svg);
     background-size: 75%;
     background-position: center center;

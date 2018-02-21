@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <MvcRazorCompileOnPublish>true</MvcRazorCompileOnPublish>
-    <UserSecretsId>aspnet-retro-C5E924EC-5B33-4982-B6E7-42BB38C15CA7</UserSecretsId>
+    <UserSecretsId>aspnet-gamingsuperpower-C5E924EC-5B33-4982-B6E7-42BB38C15CA7</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

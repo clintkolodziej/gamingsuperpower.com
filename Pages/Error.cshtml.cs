@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace retro.Pages
+namespace gamingsuperpower.Pages
 {
     public class ErrorModel : PageModel
     {

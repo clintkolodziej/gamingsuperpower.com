@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "retro": {
+    "gamingsuperpower": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
