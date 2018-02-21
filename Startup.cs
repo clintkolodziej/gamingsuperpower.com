@@ -7,17 +7,23 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
+
+using gamingsuperpower.Services;
 
 namespace gamingsuperpower
 {
     public class Startup
     {
+        private IHostingEnvironment _hostingEnvironment;
+
         public AppSettings AppSettings { get; } = new AppSettings();
 
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
+            _hostingEnvironment = env;
         }
 
         public IConfiguration Configuration { get; }
@@ -26,6 +32,17 @@ namespace gamingsuperpower
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<AppSettings>(options => Configuration.GetSection("AppSettings").Bind(options));
+            services.AddSingleton<IMarkdownService, CommonMarkDotNetService>();
+
+            //var physicalProvider = _hostingEnvironment.ContentRootFileProvider;
+            var physicalProvider = _hostingEnvironment.WebRootFileProvider;
+            //var embeddedProvider = new EmbeddedFileProvider(Assembly.GetEntryAssembly());
+            //var compositeProvider = new CompositeFileProvider(physicalProvider, embeddedProvider);
+
+            // choose one provider to use for the app and register it
+            services.AddSingleton<IFileProvider>(physicalProvider);
+            //services.AddSingleton<IFileProvider>(embeddedProvider);
+            //services.AddSingleton<IFileProvider>(compositeProvider);
 
             services.AddMvc();
         }

@@ -1,0 +1,23 @@
+﻿@page
+
+@section Styles {
+	<link rel="stylesheet" href="~/css/pages/index.css")">
+}
+
+@section Scripts {
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+}
+
+<section id="mission">
+
+	<div class="container">
+
+		<div class="intro">
+
+            @Html.Raw(@md.ConvertMarkdownToHtml("markdown/consoles/snes.md"))
+
+		</div>
+
+	</div>
+
+</section>
