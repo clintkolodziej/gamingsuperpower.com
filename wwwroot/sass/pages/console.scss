@@ -1,0 +1,113 @@
+﻿@import "site/settings";
+@import "watercolor/modules/grid";
+
+//
+// Intro
+//
+
+#intro {
+	box-sizing: border-box;
+	height: 25em;
+	position: relative;
+	background: #222;
+	overflow: hidden;
+
+	h2 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-top: 6rem;
+		margin-left: 8%;
+		width: 75%;
+		color: #fff;
+		text-align: left;
+		font-size: 2.5em;
+		z-index: 2;
+		text-shadow: .125em .125em 0 rgba(0,0,0,0.75);
+
+		small {
+			display: block;
+			margin-top: .25em;
+			color: #aaa;
+			font-size: .5em;
+			text-decoration: underline;
+		}
+	}
+	h3 {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-top: 3rem;
+		margin-left: 8%;
+		width: 75%;
+		color: #fff;
+		opacity: 0.5;
+		text-decoration: underline;
+		text-align: left;
+		font-size: 1em;
+		z-index: 2;
+	}
+	img {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 100%;
+		max-width: none;
+		transform: translate(-50%,-50%);
+		z-index: 1;
+	}
+}
+
+#summary ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	li {
+		box-sizing: border-box;
+		position: relative;
+		width: 25%;
+		flex-grow: 1;
+		padding: 1em;
+
+		transition: all 0.15s ease-in-out;
+
+		@include breakpoint(small) {
+			width: 33.3333%;
+		}
+	}
+
+	a {
+		position: relative;
+		display: block;
+		margin: 0;
+		text-align: left;
+		color: white;
+
+		&:hover {
+			box-shadow: 0 0 40px rgba(0,0,0,0.25);
+			z-index: 999;
+			transform: scale(1.05);
+		}
+
+		img {
+			display: block;
+		}
+
+		h3 {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding-left: .5em;
+			font-style: normal;
+
+				margin: .75em 0 .5em 0;
+				font-weight: 400;
+				font-size: .65em;
+		}
+	}
+}

@@ -9,10 +9,10 @@
 	text-indent: -9999px;
 	background-repeat: no-repeat;
 	background-size: cover;
-	opacity: .5;
+	opacity: .75;
 
 	& + & {
-		margin-left: .5em;
+		margin-left: .75em;
 	}
 
 	&.twitter {
@@ -21,6 +21,8 @@
 
 	&.facebook {
 		background-image: url("/images/social/facebook-circle.svg");
+		background-color: #fff;
+		border-radius: 50%;
 	}
 
 	&.linkedin {

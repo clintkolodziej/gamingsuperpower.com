@@ -239,6 +239,11 @@ ul.cards {
 		flex-wrap: wrap;
 	}
 
+	ul::after {
+		content: '';
+		flex-grow: 1000000000;
+	}
+
 	li {
 		position: relative;
 		width: 50%;
@@ -247,19 +252,19 @@ ul.cards {
 		transition: all 0.15s ease-in-out;
 
 		@include breakpoint(small) {
-			width: 50%;
+			width: 33.3333%;
 		}
 
 		@include breakpoint(medium) {
-			width: 33.33333333%;
-        }
-
-		@include breakpoint(large) {
 			width: 25%;
         }
 
-		@include breakpoint(extra-large) {
+		@include breakpoint(large) {
 			width: 20%;
+        }
+
+		@include breakpoint(extra-large) {
+			width: 16.6666%;
 		}
 
 		&:hover {
@@ -270,8 +275,8 @@ ul.cards {
 	}
 
 	figure {
+		position: relative;
 		margin: 0;
-		padding: .75em .75em .25em .75em;
 		text-align: left;
 		color: white;
 
@@ -280,6 +285,11 @@ ul.cards {
 		}
 
 		figcaption {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding-left: .5em;
 			font-style: normal;
 
 			h3 {
