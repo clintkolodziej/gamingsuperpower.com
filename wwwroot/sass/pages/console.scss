@@ -87,6 +87,21 @@
 		text-align: left;
 		color: white;
 
+		&::after {
+			content: attr(title);
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding-left: 1em;
+			font-style: normal;
+
+			margin: .75em 0 .5em 0;
+			font-weight: 400;
+			font-size: .65em;
+			font-family: $header-font-family;
+		}
+
 		&:hover {
 			box-shadow: 0 0 40px rgba(0,0,0,0.25);
 			z-index: 999;
@@ -95,19 +110,6 @@
 
 		img {
 			display: block;
-		}
-
-		h3 {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			padding-left: .5em;
-			font-style: normal;
-
-				margin: .75em 0 .5em 0;
-				font-weight: 400;
-				font-size: .65em;
 		}
 	}
 }
