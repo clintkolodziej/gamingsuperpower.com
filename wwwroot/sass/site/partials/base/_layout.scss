@@ -25,7 +25,7 @@ body {
 }
 
 //
-// Container
+// Containers
 //
 
 .container {
@@ -37,12 +37,25 @@ body {
 	@include grid;
 }
 
+.wrap {
+	box-sizing: border-box;
+	max-width: 40rem;
+	margin: 0 auto;
+	padding-right: $gutter-width;
+	padding-left: $gutter-width;
+	text-align: justify;
+
+	h1, h2, h3, h4, h5, h6 {
+		text-align: center;
+	}
+}
+
 //
 // Resets
 //
 
 body,
-#content,
+#main,
 #footer {
 	margin: 0;
 	padding: 0;
@@ -72,19 +85,7 @@ body,
 	background-size: cover;
 	color: #fff;
 	text-align: center;
-/*
-	&:after {
-		content: "";
-		position: absolute;
-		left: 50%;
-		bottom: $line-height * -2em;
-		margin-left: $line-height * -1em;
-		border-width: $line-height * 1em;
-		border-style: solid;
-		border-color: transparent;
-		border-top-color: $primary-color;
-	}
-*/
+
 	h1 {
 		font-size: 5em;
 		font-weight: 700;
@@ -121,20 +122,12 @@ body,
 //
 
 #main {
-	//@include clear-children;
+	overflow: hidden;
 
 	section {
 		padding: $line-height * 2em 0;
 		border-bottom: 1px solid $border-color;
 		text-align: center;
-
-		//background-image: linear-gradient(to right, rgb(255,0,0) 33.333333%,rgb(0,255,0) 33.333333%, rgb(0,255,0) 66.666667%, rgb(0,0,255) 66.666667%);
-		// background-image: linear-gradient(to right, rgb(255,0,0)  16.666667%, rgb(0,255,0) 16.666667%, rgb(0,255,0) 33.333333%, rgb(0,0,255) 33.333333%, rgb(0,0,255) 50%, rgb(255,0,0)  50%, rgb(255,0,0)  66.666667%, rgb(0,255,0) 66.666667%, rgb(0,255,0) 83.333333%, rgb(0,0,255) 83.333333%);
-		// -webkit-background-size: 100% 5px;
-		// -moz-background-size: 100% 5px;
-		// background-size: 100% 5px;
-		// background-repeat: no-repeat;
-		// background-position: center bottom;
 
 		&:last-child {
 			border: 0;
